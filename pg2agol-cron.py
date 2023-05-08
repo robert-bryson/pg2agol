@@ -45,6 +45,7 @@ def join_data():
 
 
 def convert_to_shp_zip(df: geopandas.GeoDataFrame) -> Path:
+    """Converts pg table to shapefile, saves as zip for upload"""
     print("Converting dataframe to shapefile..")
     tempdir = Path(tempfile.mkdtemp(prefix='arc_shp'))
     shp_file_name = os.getenv("SHP_FILE_NAME") or "dataframe.shp"
@@ -59,6 +60,7 @@ def convert_to_shp_zip(df: geopandas.GeoDataFrame) -> Path:
 
 
 def publish_to_agol(shp_path: Path):
+    """Publishes shapefile zip to AGOL"""
     print("Publishing to AGOL..")
     gis = GIS(
         url=os.getenv("AGOL_URL"),
@@ -71,8 +73,8 @@ def publish_to_agol(shp_path: Path):
 
     shp_props = {
         "type": "Shapefile",
-        "title": "NTAD Data",
-        "tags": "ntad",
+        "title": os.getenv("SHP_PROP_TITLE"),
+        "tags": os.getenv("SHP_PROP_TAGS"),
         "overwrite": True,
     }
 
