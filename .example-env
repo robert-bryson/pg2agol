@@ -1,0 +1,10 @@
+export PG_USER="postgis user name"
+export PG_PASS="postgis password"
+export PG_HOST="some.host.com"
+export PG_DB="postgis db"
+
+export SHP_FILE_NAME="export shapefile name.shp"
+
+export AGOL_URL="https://your AGOL instance.maps.arcgis.com"
+export AGOL_USER="AGOL username"
+export AGOL_PASS='AGOL password'
