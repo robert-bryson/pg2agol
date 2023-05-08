@@ -1,0 +1,6 @@
+arcgis
+geopandas
+python-dotenv
+sqlalchemy
+psycopg2-binary
+
