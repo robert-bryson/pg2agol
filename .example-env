@@ -4,6 +4,8 @@ export PG_HOST="some.host.com"
 export PG_DB="postgis db"
 
 export SHP_FILE_NAME="export shapefile name.shp"
+export SHP_PROP_TITLE="Title on AGOL"
+export SHP_PROP_TAGS="some-tag"
 
 export AGOL_URL="https://your AGOL instance.maps.arcgis.com"
 export AGOL_USER="AGOL username"
